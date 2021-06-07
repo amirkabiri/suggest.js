@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <input type="text" placeholder="type here ...">
+
+  <ul id="suggestions"></ul>
+
+  <script src="suggest.js"></script>
+  <script>
+    const suggest = new SuggestJS();
+    suggest.loadWords().then(() => {
+      console.log('loaded')
+      const suggestions = document.getElementById('suggestions');
+      document.querySelector('input').onkeyup = function(){
+        suggestions.innerHTML = '';
+        const input = this.value.split(' ');
+        if(!input.length || !input[input.length - 1].length) return;
+
+        for(let word of suggest.suggest(input[input.length - 1])){
+          const option = document.createElement('li');
+          option.innerHTML = word;
+          suggestions.appendChild(option);
+        }
+      }
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "suggest.js",
+  "version": "1.0.0",
+  "description": "suggest words",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amirkabiri/suggest.js.git"
+  },
+  "keywords": [
+    "suggest"
+  ],
+  "author": "Amir Kabiri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amirkabiri/suggest.js/issues"
+  },
+  "homepage": "https://github.com/amirkabiri/suggest.js#readme"
+}
